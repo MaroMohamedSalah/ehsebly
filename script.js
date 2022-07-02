@@ -1,11 +1,19 @@
 let stn = document.getElementById("standard");
 let calculator = document.getElementById("calculator");
-console.log(stn)
+let back = document.getElementById("back");
+console.log(stn);
 stn.onclick = function(){
     stn.style.opacity = "0";
     calculator.style.cssText = `
-        width: 100%;
-        height: 391px;
+    width: 100%;
+    height: 391px;
+    `
+}
+back.onclick = function(){
+    stn.style.opacity = "1"
+    calculator.style.cssText = `
+    width: 0;
+    height: 0;
     `
 }
 // standard calculator code :
