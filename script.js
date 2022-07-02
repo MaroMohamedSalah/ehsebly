@@ -105,5 +105,5 @@ clear.onclick = function(){
 //go to magic 
 let magic = document.getElementById("magic");
 magic.onclick = function(){
-    location.href = "../Ehseply/more bages/magic.html"
+    location.href = "../ehsebly/more bages/magic.html"
 }
