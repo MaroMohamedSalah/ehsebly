@@ -176,7 +176,6 @@ ul{
 }
     /* Small */
     @media (max-width: 768px) {
-    @media (max-width: 768px) {
       .calculator{
         top: 50%;
         left: 50%;
@@ -184,12 +183,17 @@ ul{
         z-index: 2;
       }
     }
-      }
-    }
 .calculator button{
   background-color: var(--main);
   cursor: pointer;
   position: relative;
+}
+.calculator .back {
+  position: absolute;
+  top: 16px;
+  font-size: 22px;
+  left: 10px;
+  color: var(--font-color);
 }
 .calculator button::after,
 .calculator .logo::after{
