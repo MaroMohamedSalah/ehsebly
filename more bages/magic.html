@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic | إحسبلي</title>
+    <!-- link to style  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- link to normalize -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- add awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- change tab img -->
+    <link rel="icon" href="../image/369338 (1).svg">
+</head>
+
+<body>
+    <!-- Start nav  -->
+    <section class="nav">
+        <div class="container">
+            <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+            <h1>إحسبلي</h1>
+            <div class="title" id="tMagic">Magic</div>
+        </div>
+    </section>
+    <!-- End nav  -->
+    <!-- Start Main  -->
+    <section class="main" id="main">
+        <div class="container">
+            <div class="part1">
+                <div class="box" id="evenOrOdd">
+                    Even <span>?</span> Odd
+                </div>
+                <div class="box" id="prime">
+                    Prime <span>OR</span> Not
+                </div>
+                <div class="box" id="which">
+                    Which Numbers Can I Divide By<span>?</span>
+                </div>
+            </div>
+            <div class="s">
+                <h1 class="hr">Areas And Perimeters Of Shapes</h1>
+            </div>
+            <div class="part2">
+                <div class="box" id="circle">
+                    <div class="first">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                        <div class="title">
+                            <h1>Circle</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="cInput" type="number" placeholder="Enter 'r' In CM">
+                            <label for=""><button class="done" id="done"><h4>Done</h4></button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>The Area: <span id="area">Your Result Here</span></h1>
+                            <h1>The Perimeters: <span id="per">Your Result Here</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="rectangle">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/rectangle.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>Rectangle</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="rInput" type="number" placeholder="Enter Width In CM">
+                            <input id="rInput2" type="number" placeholder="Enter Height In CM">
+                            <label for=""><button class="done" id="done2"><h4>Done</h4></button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>The Area: <span id="area2">Your Result Here</span></h1>
+                            <h1>The Perimeters: <span id="per2">Your Result Here</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="square">
+                    <div class="first">
+                        <div class="icon">
+                            <i class="fa-solid fa-square"></i>
+                        </div>
+                        <div class="title">
+                            <h1>Square</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="sInput" type="number" placeholder="Enter Square Side In CM">
+                            <label for=""><button class="done" id="done3"><h4>Done</h4></button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>The Area: <span id="area3">Your Result Here</span></h1>
+                            <h1>The Perimeters: <span id="per3">Your Result Here</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="rightTriangle">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/levels.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>Right Triangle</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="rtInput" type="number" placeholder="Enter Base In CM">
+                            <input id="rtInput2" type="number" placeholder="Enter Height In CM">
+                            <label for=""><button class="done" id="done4"><h4>Done</h4></button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>The Area: <span id="area4">Your Result Here</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Main  -->
+    <script src="../script2.js"></script>
+</body>
+
+</html>
