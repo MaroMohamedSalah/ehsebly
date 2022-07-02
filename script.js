@@ -4,8 +4,8 @@ console.log(stn)
 stn.onclick = function(){
     stn.style.opacity = "0";
     calculator.style.cssText = `
-    width: 322px;
-    height: 391px;
+        width: 100%;
+        height: 391px;
     `
 }
 // standard calculator code :
