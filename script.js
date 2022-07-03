@@ -5,7 +5,11 @@ console.log(stn);
 stn.onclick = function(){
     stn.style.opacity = "0";
     calculator.style.cssText = `
+<<<<<<< HEAD
     width: 371px;
+=======
+    width: 100%;
+>>>>>>> 2ef6c093fcb6527119c0aafafdf93765b2d8611d
     height: 391px;
     `
 }

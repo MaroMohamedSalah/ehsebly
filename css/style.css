@@ -777,6 +777,7 @@ ul{
   margin: -14px;
 }
 .main .container .part2 #rightTriangle .second .result h1 span{
+<<<<<<< HEAD
   margin: -21px;
   font-size: 26px;
 }
@@ -833,3 +834,7 @@ ul{
   background-size: cover;
   background-position-x: -32px;
 }
+=======
+  margin: 48px;
+}
+>>>>>>> 2ef6c093fcb6527119c0aafafdf93765b2d8611d
