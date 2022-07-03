@@ -1,14 +1,41 @@
 let stn = document.getElementById("standard");
 let calculator = document.getElementById("calculator");
 let back = document.getElementById("back");
+if (window.matchMedia("(max-width: 768px)").matches) {
+    stn.onclick = function(){
+        stn.style.opacity = "0";
+        calculator.style.cssText = `
+        width: 100%;
+        height: 391px;
+        `
+    }
+  } else {
+    stn.onclick = function(){
+        stn.style.opacity = "0";
+        calculator.style.cssText = `
+        width: 391px;
+        height: 391px;
+        `
+    }
+  }
 console.log(stn);
-stn.onclick = function(){
-    stn.style.opacity = "0";
-    calculator.style.cssText = `
-    width: 371px;
-    height: 391px;
-    `
-}
+// if(match.matches){
+//     stn.onclick = function(){
+//         stn.style.opacity = "0";
+//         calculator.style.cssText = `
+//         width: 100%;
+//         height: 391px;
+//         `
+//     }
+// }else{
+//     stn.onclick = function(){
+//         stn.style.opacity = "0";
+//         calculator.style.cssText = `
+//         width: 391px;
+//         height: 391px;
+//         `
+//     }
+// }
 back.onclick = function(){
     stn.style.opacity = "1"
     calculator.style.cssText = `
