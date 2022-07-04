@@ -91,3 +91,94 @@ done6.onclick = function(){
         ParallelogramArea.textContent = `${(Parallelogramb.value * Parallelogramh.value).toFixed(2)} CM^2`
     }
 }
+// part 3
+// pythagoras
+let pythagoras = document.getElementById("pythagoras")
+let a = document.getElementById("a")
+let b = document.getElementById("b")
+let c = document.getElementById("c")
+let A = document.getElementById("A")
+let B = document.getElementById("B")
+let C = document.getElementById("C")
+let re = document.getElementById("re");
+let calc = document.getElementById("calc")
+
+a.onclick = function(){
+    B.style.width = "200px"
+    B.placeholder = "Enter b in CM"
+    b.style.opacity = "0"
+    c.style.opacity = "0"
+
+    re.style.opacity = "1"
+    
+    C.style.width = "200px"
+    C.placeholder = "Enter c in CM"
+    calc.onclick = function(){
+        console.log("done")
+        A.style.fontSize = "15px"
+        A.style.color = "var(--main)"
+        A.value = `a = ${(Math.sqrt(Math.pow(C.value , 2) - Math.pow(B.value , 2))).toFixed(1)} CM`
+    }
+}
+b.onclick = function(){
+    A.style.width = "200px"
+    A.placeholder = "Enter a in CM"
+    a.style.opacity = "0"
+    c.style.opacity = "0"
+
+    re.style.opacity = "1"
+    
+    C.style.width = "200px"
+    C.placeholder = "Enter c in CM"
+
+    calc.onclick = function(){
+        console.log("done")
+        B.style.fontSize = "15px"
+        B.style.color = "var(--main)"
+        B.value = `b = ${(Math.sqrt(Math.pow(C.value , 2) - Math.pow(A.value , 2))).toFixed(1)} CM`
+    }
+}
+c.onclick = function(){
+    B.style.width = "200px"
+    B.placeholder = "Enter b in CM"
+    b.style.opacity = "0"
+    a.style.opacity = "0"
+
+    re.style.opacity = "1"
+    
+    A.style.width = "200px"
+    A.placeholder = "Enter a in CM"
+
+    calc.onclick = function(){
+        console.log("done")
+        C.style.fontSize = "15px"
+        C.style.color = "var(--main)"
+        C.value = `c = ${(Math.sqrt(Math.pow(A.value , 2) + Math.pow(B.value , 2))).toFixed(1)} CM`
+    }
+}
+re.onclick = function(){
+    A.style.width = "95px"
+    A.placeholder = "a"
+    B.style.width = "95px"
+    B.placeholder = "b"
+    C.style.width = "95px"
+    C.placeholder = "c"
+
+    a.style.opacity = "1"
+    b.style.opacity = "1"
+    c.style.opacity = "1"
+
+    A.value = "";
+    B.value = "";
+    C.value = "";
+
+    a.checked = false
+    b.checked = false
+    c.checked = false
+
+    A.style.color = "var(--font-color)"
+    B.style.color = "var(--font-color)"
+    C.style.color = "var(--font-color)"
+
+    re.style.opacity = "0"
+}
