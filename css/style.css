@@ -447,7 +447,7 @@ ul{
 }
     /* Small */
     @media (max-width: 768px) {
-      .main .container .box {
+      .main .container .part1 .box {
         width: 200px !important;
         height: 200px !important;
       }
@@ -777,7 +777,6 @@ ul{
   margin: -14px;
 }
 .main .container .part2 #rightTriangle .second .result h1 span{
-<<<<<<< HEAD
   margin: -21px;
   font-size: 26px;
 }
@@ -805,36 +804,170 @@ ul{
   margin-bottom: 72px;
   align-items: end;
 }
+    /* Small */
+    @media (max-width: 768px) {
+      .part3 .laws{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 .part3 .laws .box{
-  height: 180px;
+  width: 216px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   padding: 10px;
-  width: 180px;  
   border-radius: 10px;
-  border: 2px solid var(--main);
+  border: 2px solid var(--two);
+  transition: all 1s ease-in-out;
   position: relative;
+  flex-direction: column;
+}
+    /* Small */
+    @media (max-width: 768px) {
+      .part3 .laws .box{
+        width: 90%;
+        margin-bottom: 40px;
+      }
+    }
+.part3 .laws .box::after{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--two);
+  border-radius: 12px;
+  right: -23px;
+}
+.part3 .laws .box:hover{
+  width: 300px;
+  height: 300px;
+  border-color: var(--main);
+}
+.part3 .laws .box:hover::after{
+  animation: fillIt 1s 0.5s forwards;
+  border-radius: 5.5px;
+  z-index: -1;
+}
+@keyframes fillIt {
+  0%{
+    width: 15px;
+    height: 15px;
+    right: -23px;
+  }
+  50%{
+    width: 0px;
+    height: 0px;
+    right: 0;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    background-color: var(--main);
+    opacity: 0.1;
+  }
 }
 .part3 .laws .box h3{
   position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  transition: all 0.5s 0.5s ease-in-out;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
 }
-.part3 .laws .box:not(.active) h3{
-  font-size: 12px;
+.part3 .laws .box:hover h3{
+  position: absolute;
+  top: 14px;
+  color: var(--font-color);
 }
-.active{
-  width: 400px !important;
-  height: 400px !important;
-  border-color: var(--two) !important;
-  background-position-x: center !important;
+#pythagoras img{
+  position: absolute;
+  opacity: 0;
+  width: 103px;
+  right: 5px;
+  z-index: -1;
+  top: 6px;
 }
-#pythagoras{
-  background-image: url(../image/istockphoto-619732720-612x612.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: -32px;
+#pythagoras h4{
+  opacity: 0;
+  color: var(--main);
+  font-size: 13px;
+  font-weight: 600;
 }
-=======
-  margin: 48px;
+#pythagoras input{
+  opacity: 0;
+  margin: 10px;
+  padding: 10px;
+  z-index: 2;
 }
->>>>>>> 2ef6c093fcb6527119c0aafafdf93765b2d8611d
+#pythagoras > div > input:focus{
+  outline: solid var(--two);
+  border: none;
+}
+#pythagoras label{
+  display: inline-flex;
+  opacity: 0;
+}
+#pythagoras:hover input{
+  width: 95px;
+  margin-right: -20px;
+}
+#pythagoras:hover input,
+#pythagoras:hover label,
+#pythagoras:hover h4,
+#pythagoras:hover img{
+  opacity: 1 ;
+  transition: 1.5s 0.5s ease-in-out;
+}
+#pythagoras #re{
+  position: absolute;
+  right: 12px;
+  top: 253px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 23px;
+  color: var(--main);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#pythagoras #calc{
+  position: absolute;
+  right: -46px;
+  bottom: 15px;
+  padding: 5px;
+  background: rgba(237, 37, 77, 0.098);
+  border: 2px solid var(--main);
+  border-left-color: rgba(237, 37, 77, 0.098);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-45px);
+}
+#pythagoras:hover #calc{
+  opacity: 1;
+  transition: 1.5s 0.5s ease-in-out;
+  transform: translateX(0px) translateY(0px);
+}
+    /* Small */
+    @media (max-width: 768px) {
+      #pythagoras #calc{
+        right: 10px;
+        bottom: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-left-color: var(--main);
+        border-top-color: rgba(237, 37, 77, 0.098);
+        border-top-right-radius: 0;
+      }
+      #pythagoras:hover #calc{
+        transform: translateX(0px) translateY(33px);
+      }
+    }
