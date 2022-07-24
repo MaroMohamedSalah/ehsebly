@@ -19,23 +19,6 @@ if (window.matchMedia("(max-width: 768px)").matches) {
     }
   }
 console.log(stn);
-// if(match.matches){
-//     stn.onclick = function(){
-//         stn.style.opacity = "0";
-//         calculator.style.cssText = `
-//         width: 100%;
-//         height: 391px;
-//         `
-//     }
-// }else{
-//     stn.onclick = function(){
-//         stn.style.opacity = "0";
-//         calculator.style.cssText = `
-//         width: 391px;
-//         height: 391px;
-//         `
-//     }
-// }
 back.onclick = function(){
     stn.style.opacity = "1"
     calculator.style.cssText = `
@@ -141,4 +124,23 @@ clear.onclick = function(){
 let magic = document.getElementById("magic");
 magic.onclick = function(){
     location.href = "../ehsebly/more bages/magic.html"
+}
+// footer
+let myPic = document.getElementById("myPic");
+let face = document.getElementById("face");
+let insta = document.getElementById("insta");
+let linkedIn = document.getElementById("linkedIn");
+let git = document.getElementById("git");
+let feedback = document.getElementById("feedback");
+window.onscroll = function(){
+    myPic.style.left = "81%";
+    face.style.opacity = "1";
+    insta.style.opacity = "1";
+    git.style.opacity = "1";
+    linkedIn.style.opacity = "1";
+    // feedback.style.opacity = "1";
+}
+if (window.matchMedia("(max-width: 768px)").matches) {
+    feedback.style.opacity = "0";
+    
 }

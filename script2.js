@@ -182,3 +182,124 @@ re.onclick = function(){
 
     re.style.opacity = "0"
 }
+// part 4
+// Unit Conversions
+let calc2 = document.getElementById("calc2");
+let km = document.getElementById("km");
+let G = document.getElementById("G");
+let h = document.getElementById("h");
+let cm = document.getElementById("cm");
+let M = document.getElementById("M")
+let byte = document.getElementById("byte")
+let selectArrow = document.getElementById("selectArrow");
+let selectArrow2 = document.getElementById("selectArrow2");
+let part4Input = document.getElementById("part4In")
+let part4Out = document.getElementById("part4Res")
+let exit = document.getElementById("exit")
+let unit = document.getElementById("unit")
+let unit2 = document.getElementById("unit2")
+let def1 = document.querySelector("#def1")
+let beforDef1 = document.getElementById("beforeD1")
+let beforDef2 = document.getElementById("beforeD2")
+    
+console.log(beforDef1)
+let count = 0;
+let count2 = 0;
+km.onclick = function(){
+    unit.textContent = "KM";
+    beforDef1.style.left = "6px"
+    beforDef2.style.left = "6px"
+    unit2.textContent = "M"
+}
+G.onclick = function(){
+    unit.textContent = "G";
+    beforDef1.style.left = "68px"
+    beforDef2.style.left = "68px"
+    unit2.textContent = "byte"
+}
+h.onclick = function(){
+    unit.textContent = "h";
+    beforDef1.style.left = "130px"
+    beforDef2.style.left = "130px"
+    unit2.textContent = "cm"
+}
+M.onclick = function(){
+    unit2.textContent = "M"
+    // unit.textContent = "KM";
+    // beforDef1.style.left = "6px"
+    beforDef2.style.left = "6px"
+}
+byte.onclick = function(){
+    unit2.textContent = "byte"
+    // unit.textContent = "G";
+    // beforDef1.style.left = "68px"
+    beforDef2.style.left = "68px"
+}
+cm.onclick = function(){
+    unit2.textContent = "cm"
+    // unit.textContent = "h";
+    // beforDef1.style.left = "130px"
+    beforDef2.style.left = "130px"
+}
+let ch1 = document.getElementById("ch1")
+let ch2 = document.getElementById("ch2")
+selectArrow.onclick = function(){
+    if(count === 0){
+        selectArrow.style.transform = "rotate(180deg)"
+        count++
+        ch1.style.height = "200px"
+    }else{
+        selectArrow.style.transform = "rotate(360deg)"
+        count=0
+        ch1.style.height = "0px"
+    }
+}
+selectArrow2.onclick = function(){
+    if(count2 === 0){
+        selectArrow2.style.transform = "rotate(180deg)"
+        count2++
+        ch2.style.height = "200px"
+    }else{
+        selectArrow2.style.transform = "rotate(360deg)"
+        count2=0
+        ch2.style.height = "0px"
+    }
+}
+calc2.onclick = function(){
+    if((unit.textContent==="KM") && (unit2.textContent === "M")){        
+        part4Out.style.fontSize = "40px"
+        part4Out.textContent = `${part4Input.value * Math.pow(10,3)}`
+    }
+    if((unit.textContent==="G") && (unit2.textContent === "byte")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * Math.pow(10,9)}`
+    }
+    if((unit.textContent==="h") && (unit2.textContent === "M")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * Math.pow(10,2)}`
+    }
+}
+exit.onclick = function(){
+    part4Input.value = ''
+    part4Out.textContent = "YOUR RESULT HERE"
+    part4Out.style.fontSize = "12px"
+}
+// footer
+let myPic = document.getElementById("myPic");
+let face = document.getElementById("face");
+let insta = document.getElementById("insta");
+let linkedIn = document.getElementById("linkedIn");
+let git = document.getElementById("git");
+let feedback = document.getElementById("feedback");
+window.onscroll = function(){
+    myPic.style.left = "81%";
+    face.style.opacity = "1";
+    insta.style.opacity = "1";
+    git.style.opacity = "1";
+    linkedIn.style.opacity = "1";
+    // feedback.style.opacity = "1";
+}
+if (window.matchMedia("(max-width: 768px)").matches) {
+    feedback.style.opacity = "0";
+    
+}
