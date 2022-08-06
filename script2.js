@@ -284,6 +284,74 @@ exit.onclick = function(){
     part4Out.textContent = "YOUR RESULT HERE"
     part4Out.style.fontSize = "12px"
 }
+// part 5
+let part5 = document.getElementById("part5");
+let group = document.getElementById("group");
+let checkDone = document.getElementById("checkDone");
+let birthDone = document.getElementById("birthDone");
+let birthInput = document.getElementById("birthday");
+let first = document.getElementById("first");
+let mid = document.getElementById("mid");
+let last = document.getElementById("last");
+let firstp = document.getElementById("firstP");
+let midp = document.getElementById("midP");
+let more = document.getElementById("more");
+let lastp = document.getElementById("lastP");
+console.log(birthDone)
+console.log(birthInput)
+let dateNow = Date.now();
+console.log(dateNow)
+birthDone.onclick = function() {
+    if(birthInput.value === ""){
+        window.alert("You Should Enter Your BirthDay")
+    }
+    else{
+        const BirthDay = new Date(birthInput.value);
+        group.style.cssText = `
+        position: absolute;
+        top: 100px;
+        `
+        birthDone.style.cssText = `
+        right: 25px;
+        `
+        setTimeout(() => {
+            birthDone.style.opacity = '0';
+        }, 1000);
+        setTimeout(() => {
+            checkDone.style.opacity = '1'
+        }, 3000);
+        first.style.opacity = "1"
+        // firstp.textContent = `Your Next Birthday After: ${(BirthDay - Date.now())/1000/60/60/24}Days`
+        mid.style.opacity = "1"
+        // midp.textContent = `You Have ${Math.round((Date.now() - BirthDay)/1000/60/60/24/365)} Year old`
+        midp.innerHTML = `
+        You Have <span>${Math.round((Date.now() - BirthDay)/1000/60/60/24/365)}</span> Years, <span>${Math.round((Date.now() - BirthDay)/1000/60/60/24)}</span> Days <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
+        `
+        more.innerHTML = `
+        <span>${Math.round((Date.now() - BirthDay)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay)/1000)}</span> Second
+        `
+        firstp.innerHTML = `
+        the count of your next birthday will display here`
+        lastp.innerHTML = `
+        Your Hijri Year is <span>${Math.floor(((BirthDay.getFullYear())-622)/(354/365.25))}</span>h 
+        `
+        let selectArrow3 = document.getElementById("selectArrow3");
+        let count3 = 0;
+        selectArrow3.onclick = function(){
+            if(count3 === 0){
+                selectArrow3.style.transform = "rotate(180deg)"
+                count3++
+                more.style.height = 'fit-content' 
+            }else{
+                selectArrow3.style.transform = "rotate(360deg)"
+                count3=0
+                more.style.height = '0' 
+            }
+        }
+        // <span>${Math.round((Date.now() - BirthDay)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay)/1000)}</span> Seconds
+        last.style.opacity = "1"
+    }
+}
 // footer
 let myPic = document.getElementById("myPic");
 let face = document.getElementById("face");

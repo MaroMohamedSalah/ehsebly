@@ -1238,6 +1238,171 @@ ul{
     font-size: 10px;
   }
 }
+/* Style part5 */
+.part5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+#group{
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+.part5 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.part5 .background{
+  background-color: rgb(249 220 92 / 19%);
+  padding: 30px;
+  border-radius: 69px;
+  margin-right: 14px;
+  padding-right: 68px;
+}
+/* Small */
+@media (max-width: 768px) {
+  .part5 .background{
+    padding-right: 64px;
+  }
+}
+.part5 input{
+  padding: 8px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  width: 300px;
+  color: var(--main);
+}
+/* Small */
+@media (max-width: 768px) {
+  .part5 input{
+    width: 139px;
+    padding: 5px;
+  }
+}
+.part5 button{
+  padding: 7px;
+  border-radius: 9px;
+  border: none;
+  background-color: var(--two);
+  color: var(--main);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  right: -50px;
+}
+#checkDone{
+  position: absolute;
+  right: 38px;
+  color: var(--main);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.part5 button:hover{
+  background-color: rgb(249 220 92 / 19%);
+}
+.part5 .birthResult{
+  width: 500px;
+  height: 500px;
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 11px 67px;
+  /* z-index: -1; */
+}
+.part5 .birthResult div{
+  background-color: #0A66C2;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 1s 1s ease-in-out;
+  position: relative;
+}
+.part5 .birthResult div p{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 502px;
+  left: 20px;
+  color: var(--font-color);
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+/* Small */
+@media (max-width: 768px) {
+  .part5 .birthResult{
+    width: 373px;
+  }
+  .part5 .birthResult div p{
+    min-width: 242px;
+    font-size: 13px;
+  }
+  .part5 .birthResult div p span{
+    font-size: 20px !important;
+  }
+}
+#more{
+  overflow: hidden;
+  position: absolute;
+  top: 72px;
+  height: 0;
+  transition: all 0.5s ease-in-out;
+  font-size: 10px;
+}
+#more span{
+  color: var(--main);
+  font-size: 25px;
+}
+.part5 .birthResult div:first-child{
+  opacity: 0;
+  transition: all 1s 0s ease-in-out;
+}
+
+.part5 .birthResult div:last-child{
+  opacity: 0;
+  transition: all 1s 2s  ease-in-out;
+}
+#firstP span{
+
+}
+#midP span{
+  color: var(--main);
+  font-size: 30px;
+}
+#lastP{
+
+}
+#lastP span{
+  color: var(--main);
+  font-size: 30px;
+}
+#selectArrow3{
+  margin-left: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* Small */
+@media (max-width: 768px) {
+  
+}
 /* Style footer */
 footer{
   background-color: var(--font-color);
