@@ -1,3 +1,34 @@
+// dark mood 
+let dark = document.getElementById("dark");
+let light = document.getElementById("light");
+let moodBox = document.getElementById("mood");
+let r = document.querySelector(':root');
+dark.onclick = () =>{
+    dark.style.left = '45px'
+    light.style.left = '45px'
+    setTimeout(() => {
+        light.style.opacity = '1'
+        dark.style.opacity = '0'
+        dark.style.zIndex = '-1'
+        light.style.zIndex = '1'
+        moodBox.style.borderColor = '#F4FFFDFF'
+        r.style.setProperty('--background', '#202124')
+        r.style.setProperty('--font-color', '#F4FFFDFF')
+    }, 500);
+}
+light.onclick = () =>{
+    light.style.left = '3px'
+    dark.style.left = '3px'
+    setTimeout(() => {
+        light.style.opacity = '0'
+        dark.style.opacity = '1'
+        light.style.zIndex = '-1'
+        dark.style.zIndex = '1'
+        moodBox.style.borderColor = '#011936FF'
+        r.style.setProperty('--background', '#F4FFFDFF')
+        r.style.setProperty('--font-color', '#011936FF')
+    }, 500);
+}
 let stn = document.getElementById("standard");
 let calculator = document.getElementById("calculator");
 let back = document.getElementById("back");

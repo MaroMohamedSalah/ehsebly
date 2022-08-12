@@ -1,3 +1,37 @@
+// dark mood 
+let dark = document.getElementById("dark");
+let light = document.getElementById("light");
+let moodBox = document.getElementById("mood");
+let r = document.querySelector(':root');
+dark.onclick = () =>{
+    dark.style.left = '45px'
+    light.style.left = '45px'
+    setTimeout(() => {
+        light.style.opacity = '1'
+        dark.style.opacity = '0'
+        dark.style.zIndex = '-1'
+        light.style.zIndex = '1'
+        moodBox.style.borderColor = '#F4FFFDFF'
+        r.style.setProperty('--background', '#202124')
+        r.style.setProperty('--font-color', '#F4FFFDFF')
+    }, 500);
+}
+light.onclick = () =>{
+    light.style.left = '3px'
+    dark.style.left = '3px'
+    setTimeout(() => {
+        light.style.opacity = '0'
+        dark.style.opacity = '1'
+        light.style.zIndex = '-1'
+        dark.style.zIndex = '1'
+        moodBox.style.borderColor = '#011936FF'
+        r.style.setProperty('--background', '#F4FFFDFF')
+        r.style.setProperty('--font-color', '#011936FF')
+    }, 500);
+}
+
+
+
 let title_magic = document.getElementById("tMagic")
 let evenOrOdd = document.getElementById("evenOrOdd");
 let prime = document.getElementById("prime");
@@ -189,8 +223,9 @@ let km = document.getElementById("km");
 let G = document.getElementById("G");
 let h = document.getElementById("h");
 let cm = document.getElementById("cm");
-let M = document.getElementById("M")
-let byte = document.getElementById("byte")
+let first_ch = document.getElementById("f")
+let s_ch = document.getElementById("s")
+let th_ch = document.getElementById("th")
 let selectArrow = document.getElementById("selectArrow");
 let selectArrow2 = document.getElementById("selectArrow2");
 let part4Input = document.getElementById("part4In")
@@ -210,12 +245,17 @@ km.onclick = function(){
     beforDef1.style.left = "6px"
     beforDef2.style.left = "6px"
     unit2.textContent = "M"
+    first_ch.textContent = "M"
+    s_ch.textContent = "feet"
+    th_ch.textContent = "cm"
 }
 G.onclick = function(){
     unit.textContent = "G";
     beforDef1.style.left = "68px"
     beforDef2.style.left = "68px"
-    unit2.textContent = "byte"
+    first_ch.textContent = "Byte"
+    s_ch.textContent = "Tera"
+    th_ch.textContent = "Miga"
 }
 h.onclick = function(){
     unit.textContent = "h";
@@ -223,22 +263,16 @@ h.onclick = function(){
     beforDef2.style.left = "130px"
     unit2.textContent = "cm"
 }
-M.onclick = function(){
-    unit2.textContent = "M"
-    // unit.textContent = "KM";
-    // beforDef1.style.left = "6px"
+first_ch.onclick = function(){
+    unit2.textContent = `${first_ch.textContent}`
     beforDef2.style.left = "6px"
 }
-byte.onclick = function(){
-    unit2.textContent = "byte"
-    // unit.textContent = "G";
-    // beforDef1.style.left = "68px"
+s_ch.onclick = function(){
+    unit2.textContent = `${s_ch.textContent}`
     beforDef2.style.left = "68px"
 }
-cm.onclick = function(){
-    unit2.textContent = "cm"
-    // unit.textContent = "h";
-    // beforDef1.style.left = "130px"
+th_ch.onclick = function(){
+    unit2.textContent = `${th_ch.textContent}`
     beforDef2.style.left = "130px"
 }
 let ch1 = document.getElementById("ch1")
@@ -270,13 +304,25 @@ calc2.onclick = function(){
         part4Out.style.fontSize = "40px"
         part4Out.textContent = `${part4Input.value * Math.pow(10,3)}`
     }
-    if((unit.textContent==="G") && (unit2.textContent === "byte")){        
-        part4Out.style.fontSize = "26px"
-        part4Out.textContent = `${part4Input.value * Math.pow(10,9)}`
+    if((unit.textContent==="KM") && (unit2.textContent === "cm")){       
+        part4Out.style.fontSize = "40px"
+        part4Out.textContent = `${part4Input.value * 100000}`
     }
-    if((unit.textContent==="h") && (unit2.textContent === "M")){        
+    if((unit.textContent==="KM") && (unit2.textContent === "feet")){        
+        part4Out.style.fontSize = "40px"
+        part4Out.textContent = `${(part4Input.value * 3280.8399).toFixed(2)}`
+    }
+    if((unit.textContent==="G") && (unit2.textContent === "Tera")){        
         part4Out.style.fontSize = "26px"
-        part4Out.textContent = `${part4Input.value * Math.pow(10,2)}`
+        part4Out.textContent = `${part4Input.value * 0.001}`
+    }
+    if((unit.textContent==="G") && (unit2.textContent === "Byte")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * 1073741824}`
+    }
+    if((unit.textContent==="G") && (unit2.textContent === "Miga")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * 1000}`
     }
 }
 exit.onclick = function(){
@@ -297,16 +343,21 @@ let firstp = document.getElementById("firstP");
 let midp = document.getElementById("midP");
 let more = document.getElementById("more");
 let lastp = document.getElementById("lastP");
+let return1 = document.getElementById("return");
 console.log(birthDone)
 console.log(birthInput)
 let dateNow = Date.now();
-console.log(dateNow)
+let d = new Date();
 birthDone.onclick = function() {
     if(birthInput.value === ""){
         window.alert("You Should Enter Your BirthDay")
     }
     else{
         const BirthDay = new Date(birthInput.value);
+        const BirthDay2 = new Date(birthInput.value);
+        const yearsOld = Math.round((Date.now() - BirthDay)/1000/60/60/24/365)
+        console.log(BirthDay)
+        const next = new Date(BirthDay.setFullYear(BirthDay.getFullYear()+ yearsOld + 1))
         group.style.cssText = `
         position: absolute;
         top: 100px;
@@ -321,19 +372,18 @@ birthDone.onclick = function() {
             checkDone.style.opacity = '1'
         }, 3000);
         first.style.opacity = "1"
-        // firstp.textContent = `Your Next Birthday After: ${(BirthDay - Date.now())/1000/60/60/24}Days`
         mid.style.opacity = "1"
-        // midp.textContent = `You Have ${Math.round((Date.now() - BirthDay)/1000/60/60/24/365)} Year old`
         midp.innerHTML = `
-        You Have <span>${Math.round((Date.now() - BirthDay)/1000/60/60/24/365)}</span> Years, <span>${Math.round((Date.now() - BirthDay)/1000/60/60/24)}</span> Days <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
+        You Have <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> Years, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> Days <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
         `
         more.innerHTML = `
-        <span>${Math.round((Date.now() - BirthDay)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay)/1000)}</span> Second
+        <span>${Math.round((Date.now() - BirthDay2)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay2)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay2)/1000)}</span> Second
         `
         firstp.innerHTML = `
-        the count of your next birthday will display here`
+        Your next birthday after: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> Months
+        `
         lastp.innerHTML = `
-        Your Hijri Year is <span>${Math.floor(((BirthDay.getFullYear())-622)/(354/365.25))}</span>h 
+        Your Hijri Year is <span>${Math.floor(((BirthDay2.getFullYear())-622)/(354/365.25))}</span>h 
         `
         let selectArrow3 = document.getElementById("selectArrow3");
         let count3 = 0;
@@ -348,8 +398,27 @@ birthDone.onclick = function() {
                 more.style.height = '0' 
             }
         }
-        // <span>${Math.round((Date.now() - BirthDay)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay)/1000)}</span> Seconds
         last.style.opacity = "1"
+        return1.onclick = () =>{
+            birthInput.value = ""
+            group.style.cssText = `
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            `
+            birthDone.style.cssText = `
+            right: -50px;
+            `
+            setTimeout(() => {
+                birthDone.style.opacity = '1';
+            }, 500);
+            setTimeout(() => {
+                checkDone.style.opacity = '0'
+            }, 2000);
+            first.style.opacity = "0"
+            mid.style.opacity = "0"
+            last.style.opacity = "0"
+        }
     }
 }
 // footer
@@ -360,14 +429,26 @@ let linkedIn = document.getElementById("linkedIn");
 let git = document.getElementById("git");
 let feedback = document.getElementById("feedback");
 window.onscroll = function(){
-    myPic.style.left = "81%";
-    face.style.opacity = "1";
-    insta.style.opacity = "1";
-    git.style.opacity = "1";
-    linkedIn.style.opacity = "1";
-    // feedback.style.opacity = "1";
+    if(window.scrollY > 3640){        
+        myPic.style.left = "81%";
+        face.style.opacity = "1";
+        insta.style.opacity = "1";
+        git.style.opacity = "1";
+        linkedIn.style.opacity = "1";
+    }
+    console.log(window.scrollY)
 }
 if (window.matchMedia("(max-width: 768px)").matches) {
-    feedback.style.opacity = "0";
-    
+    console.log("I'm in phone")
+    window.onscroll = () =>{
+        if(window.scrollY > 6500){        
+            myPic.style.left = "81%";
+            face.style.opacity = "1";
+            insta.style.opacity = "1";
+            git.style.opacity = "1";
+            linkedIn.style.opacity = "1";
+            feedback.style.opacity = "0";
+            console.log("done")
+        }
+    }
 }

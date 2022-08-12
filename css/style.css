@@ -16,6 +16,7 @@ html{
 }
 body{
   font-family: 'Changa', sans-serif;
+  background-color: var(--background);
 }
 a{
   text-decoration: none;
@@ -47,6 +48,48 @@ ul{
           width: 1170px ;
         }
       }
+/* style dark mood */
+#mood{
+  position: absolute;
+  width: 75px;
+  height: 32px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 49px;
+  right: 53px;
+  top: 109px;
+  padding: 3px;
+  transition: all 0.5s ease-in-out;
+  border-color: var(--font-color);
+  z-index: 5;
+}
+    /* Small */
+    @media (max-width: 768px) {
+      #mood{
+        right: 16px;
+      }
+    }
+#dark{
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  color: var(--font-color);
+}
+#light{
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  color: var(--background);
+  z-index: -1;
+}
 /* Style nav */
 .nav{
   background-color: var(--main);
@@ -325,6 +368,7 @@ ul{
   font-size: 21px;
   animation: up-and-down 1.5s infinite;
 }
+
 @keyframes up-and-down {
   0% , 10% , 20% , 50% ,80% , 100%{
     transform: translateY(0px);
@@ -360,6 +404,9 @@ ul{
       }
       .intro .container ul li{
         font-size: 19px !important;
+      }
+      .intro .container .icon{
+        bottom: 8px;
       }
     }
 .intro .container ul::after{
@@ -796,13 +843,16 @@ ul{
 
 /* style part 3 */
 .part3 .laws{
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3 , auto);
   gap: 20px 20px;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   margin-top: 129px;
   margin-bottom: 72px;
-  align-items: end;
+  /* align-items: end; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
     /* Small */
     @media (max-width: 768px) {
@@ -883,6 +933,9 @@ ul{
   position: absolute;
   top: 14px;
   color: var(--font-color);
+}
+#pythagoras{
+
 }
 #pythagoras img{
   position: absolute;
@@ -1248,6 +1301,11 @@ ul{
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
+#return{
+  right: -125px;
+  width: fit-content;
+  height: fit-content;
+}
 #group{
   transition: all 0.5s ease-in-out;
   z-index: 2;
@@ -1272,6 +1330,11 @@ ul{
 @media (max-width: 768px) {
   .part5 .background{
     padding-right: 64px;
+  }
+  #return{
+    right: 15%;
+    width: 186px;
+    bottom: -39px;
   }
 }
 .part5 input{
@@ -1299,6 +1362,11 @@ ul{
   transition: all 0.5s ease-in-out;
   position: absolute;
   right: -50px;
+}
+@media (max-width: 768px) {
+  #birthDone{
+    right: -38px;
+  }
 }
 #checkDone{
   position: absolute;
@@ -1366,6 +1434,10 @@ ul{
   height: 0;
   transition: all 0.5s ease-in-out;
   font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #more span{
   color: var(--main);
@@ -1381,7 +1453,8 @@ ul{
   transition: all 1s 2s  ease-in-out;
 }
 #firstP span{
-
+  color: var(--main);
+  font-size: 40px;
 }
 #midP span{
   color: var(--main);
@@ -1405,7 +1478,7 @@ ul{
 }
 /* Style footer */
 footer{
-  background-color: var(--font-color);
+  background-color: #304146;
   height: 250px;
   position: relative;
   display: flex;
