@@ -30,8 +30,7 @@ light.onclick = () =>{
     }, 500);
 }
 
-
-
+// magic
 let title_magic = document.getElementById("tMagic")
 let evenOrOdd = document.getElementById("evenOrOdd");
 let prime = document.getElementById("prime");
@@ -221,7 +220,7 @@ re.onclick = function(){
 let calc2 = document.getElementById("calc2");
 let km = document.getElementById("km");
 let G = document.getElementById("G");
-let h = document.getElementById("h");
+let ci = document.getElementById("ci");
 let cm = document.getElementById("cm");
 let first_ch = document.getElementById("f")
 let s_ch = document.getElementById("s")
@@ -252,16 +251,21 @@ km.onclick = function(){
 G.onclick = function(){
     unit.textContent = "G";
     beforDef1.style.left = "68px"
-    beforDef2.style.left = "68px"
+    beforDef2.style.left = "6px"
     first_ch.textContent = "Byte"
     s_ch.textContent = "Tera"
     th_ch.textContent = "Miga"
+    unit2.textContent = "Byte"
 }
-h.onclick = function(){
-    unit.textContent = "h";
+ci.onclick = function(){
+    console.log("click")
+    unit.textContent = "celsius";
     beforDef1.style.left = "130px"
-    beforDef2.style.left = "130px"
-    unit2.textContent = "cm"
+    beforDef2.style.left = "6px"
+    first_ch.textContent = "K"
+    s_ch.textContent = "f"
+    th_ch.textContent = ""
+    unit2.textContent = "k"
 }
 first_ch.onclick = function(){
     unit2.textContent = `${first_ch.textContent}`
@@ -323,6 +327,14 @@ calc2.onclick = function(){
     if((unit.textContent==="G") && (unit2.textContent === "Miga")){        
         part4Out.style.fontSize = "26px"
         part4Out.textContent = `${part4Input.value * 1000}`
+    }
+    if((unit.textContent==="celsius") && (unit2.textContent === "k")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * 274.15}`
+    }
+    if((unit.textContent==="celsius") && (unit2.textContent === "f")){        
+        part4Out.style.fontSize = "26px"
+        part4Out.textContent = `${part4Input.value * 33.8}`
     }
 }
 exit.onclick = function(){

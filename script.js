@@ -57,6 +57,27 @@ back.onclick = function(){
     height: 0;
     `
 }
+// setting 
+let count = 0;
+let gear = document.getElementById("gear");
+let settingBox = document.getElementById("setting");
+let settingIcon = document.getElementById("setIcon");
+settingIcon.onclick = () =>{
+    if(count===0){
+        count++;
+        gear.style.animation = "none"
+        settingBox.style.right = '0';
+    }else{
+        count=0;
+        if(window.matchMedia("(max-width: 768px)").matches){
+            settingBox.style.right = '-106px';
+            console.log("phone")
+        }else{
+            settingBox.style.right = '-138px';
+        }
+        gear.style.animation = "alwaysRound 2s infinite forwards ease-in-out"
+    }
+}
 // standard calculator code :
 // numbers 
 let screen = document.getElementById("screen");
@@ -173,5 +194,4 @@ window.onscroll = function(){
 }
 if (window.matchMedia("(max-width: 768px)").matches) {
     feedback.style.opacity = "0";
-    
 }

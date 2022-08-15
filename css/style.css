@@ -17,6 +17,7 @@ html{
 body{
   font-family: 'Changa', sans-serif;
   background-color: var(--background);
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -56,8 +57,8 @@ ul{
   background-color: white;
   border: 5px solid;
   border-radius: 49px;
-  right: 53px;
-  top: 109px;
+  right: 49px;
+  top: 14px;
   padding: 3px;
   transition: all 0.5s ease-in-out;
   border-color: var(--font-color);
@@ -111,6 +112,55 @@ ul{
   font-size: 53px;
   color: var(--font-color);
   z-index: 2;
+}
+/* Style setting */
+.setting{
+  position: absolute;
+  right: -138px;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(237, 37, 77, 0.139);
+  padding: 49px;
+  top: 129px;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 0.5s ease-in-out;
+}
+.setting .setIcon{
+  position: relative;
+  left: -100px;
+  font-size: 40px;
+  top: 8px;
+  color: var(--two);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.setting .lang h1{
+  direction: rtl;
+  font-size: 19px;
+  position: absolute;
+  top: 64px;
+  right: 49px;
+}
+.setting .lang h1 span{
+  font-size: 43px;
+  position: absolute;
+  top: -16px;
+  left: -64px;
+  color: var(--font-color);
+}
+.setting .lang h3{
+  position: absolute;
+  top: 103px;
+  left: 33px;
+  color: var(--font-color);
+}
+.setting .setIcon i{
+  animation: alwaysRound 2s infinite forwards ease-in-out;
+}
+@keyframes alwaysRound {
+  0%{
+    transform: rotate(360deg);
+  }
 }
 /* style option */
 .option{
