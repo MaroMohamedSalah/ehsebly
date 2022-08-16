@@ -160,15 +160,15 @@ squ.onclick = function(){
 eq.onclick = function(){
     screen.value = eval(screen.value) ;
 }
-del.onclick = function(){
-    let newValue = [...screen.value];
-    newValue.pop()
-    for(let i = 0 ; i < newValue.length ; i++ ){
-        screen.value = screen.value + +newValue[i];
-        console.log(screen.value)
-    }
-    console.log(screen.value);
-}
+// del.onclick = function(){
+//     let newValue = [...screen.value];
+//     newValue.pop()
+//     for(let i = 0 ; i < newValue.length ; i++ ){
+//         screen.value = screen.value + +newValue[i];
+//         console.log(screen.value)
+//     }
+//     console.log(screen.value);
+// }
 clear.onclick = function(){
     screen.value = "";
 }
@@ -184,14 +184,11 @@ let insta = document.getElementById("insta");
 let linkedIn = document.getElementById("linkedIn");
 let git = document.getElementById("git");
 let feedback = document.getElementById("feedback");
-window.onscroll = function(){
+window.onscroll = () =>{
+    console.log(window.scrollY)
     myPic.style.left = "81%";
     face.style.opacity = "1";
     insta.style.opacity = "1";
     git.style.opacity = "1";
     linkedIn.style.opacity = "1";
-    // feedback.style.opacity = "1";
-}
-if (window.matchMedia("(max-width: 768px)").matches) {
-    feedback.style.opacity = "0";
 }

@@ -1,40 +1,9 @@
-// dark mood 
-let dark = document.getElementById("dark");
-let light = document.getElementById("light");
-let moodBox = document.getElementById("mood");
-let r = document.querySelector(':root');
-dark.onclick = () =>{
-    dark.style.left = '45px'
-    light.style.left = '45px'
-    setTimeout(() => {
-        light.style.opacity = '1'
-        dark.style.opacity = '0'
-        dark.style.zIndex = '-1'
-        light.style.zIndex = '1'
-        moodBox.style.borderColor = '#F4FFFDFF'
-        r.style.setProperty('--background', '#202124')
-        r.style.setProperty('--font-color', '#F4FFFDFF')
-    }, 500);
-}
-light.onclick = () =>{
-    light.style.left = '3px'
-    dark.style.left = '3px'
-    setTimeout(() => {
-        light.style.opacity = '0'
-        dark.style.opacity = '1'
-        light.style.zIndex = '-1'
-        dark.style.zIndex = '1'
-        moodBox.style.borderColor = '#011936FF'
-        r.style.setProperty('--background', '#F4FFFDFF')
-        r.style.setProperty('--font-color', '#011936FF')
-    }, 500);
-}
-
 // magic
 let title_magic = document.getElementById("tMagic")
 let evenOrOdd = document.getElementById("evenOrOdd");
 let prime = document.getElementById("prime");
 let which = document.getElementById("which");
+console.log(evenOrOdd)
 evenOrOdd.onclick = function(){
     window.open("../more bages/evenOrOdd.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 }
@@ -448,7 +417,6 @@ window.onscroll = function(){
         git.style.opacity = "1";
         linkedIn.style.opacity = "1";
     }
-    console.log(window.scrollY)
 }
 if (window.matchMedia("(max-width: 768px)").matches) {
     console.log("I'm in phone")

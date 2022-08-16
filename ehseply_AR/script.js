@@ -160,15 +160,15 @@ squ.onclick = function(){
 eq.onclick = function(){
     screen.value = eval(screen.value) ;
 }
-del.onclick = function(){
-    let newValue = [...screen.value];
-    newValue.pop()
-    for(let i = 0 ; i < newValue.length ; i++ ){
-        screen.value = screen.value + +newValue[i];
-        console.log(screen.value)
-    }
-    console.log(screen.value);
-}
+// del.onclick = function(){
+//     let newValue = [...screen.value];
+//     newValue.pop()
+//     for(let i = 0 ; i < newValue.length ; i++ ){
+//         screen.value = screen.value + +newValue[i];
+//         console.log(screen.value)
+//     }
+//     console.log(screen.value);
+// }
 clear.onclick = function(){
     screen.value = "";
 }

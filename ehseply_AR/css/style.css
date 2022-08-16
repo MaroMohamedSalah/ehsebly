@@ -1029,9 +1029,6 @@ ul{
   top: 14px;
   color: var(--font-color);
 }
-#pythagoras{
-  /* direction: rtl; */
-}
 #pythagoras img{
   position: absolute;
   opacity: 0;
@@ -1558,9 +1555,7 @@ ul{
   color: var(--main);
   font-size: 30px;
 }
-#lastP{
 
-}
 #lastP span{
   color: var(--main);
   font-size: 30px;
@@ -1569,10 +1564,6 @@ ul{
   margin-left: 20px;
   font-size: 25px;
   cursor: pointer;
-}
-/* Small */
-@media (max-width: 768px) {
-  
 }
 /* Style footer */
 footer{
