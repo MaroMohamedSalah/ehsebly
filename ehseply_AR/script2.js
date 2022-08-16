@@ -468,13 +468,12 @@ window.onscroll = function(){
 if (window.matchMedia("(max-width: 768px)").matches) {
     console.log("I'm in phone")
     window.onscroll = () =>{
-        if(window.scrollY > 6500){        
+        if(window.scrollY > 6300){        
             myPic.style.left = "81%";
             face.style.opacity = "1";
             insta.style.opacity = "1";
             git.style.opacity = "1";
             linkedIn.style.opacity = "1";
-            feedback.style.opacity = "0";
             console.log("done")
         }
     }
