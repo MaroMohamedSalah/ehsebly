@@ -21,34 +21,6 @@ body{
   overflow-x: hidden;
   overflow-y: scroll !important;
 }
-<<<<<<< HEAD
-/* @media (max-width: 768px) {
-  html {
-    position: fixed;
-    height: 100%;
-    overflow-x: hidden;
-=======
-@media (max-width: 768px) {
-  html {
-    position: fixed;
-    height: 100%;
-    overflow: hidden;
->>>>>>> 9acb611bc53041c38f4618591a16653291c388f6
-  }
-  
-  body {
-    margin: 0;
-    width: 100vw; 
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-<<<<<<< HEAD
-} */
-=======
-}
->>>>>>> 9acb611bc53041c38f4618591a16653291c388f6
 a{
   text-decoration: none;
 }
