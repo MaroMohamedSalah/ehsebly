@@ -151,7 +151,6 @@ ul{
   top: 64px;
   right: 49px;
 }
-
 .setting .lang h1 span{
   font-size: 43px;
   position: absolute;
@@ -183,6 +182,79 @@ ul{
 @keyframes alwaysRound {
   0%{
     transform: rotate(360deg);
+  }
+}
+/* color change */
+form#changeColor{
+  position: absolute;
+  background-color: var(--two);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 9px;
+  gap: 10px;
+  top: 281px;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 0.5s ease-in-out;
+  z-index: 500;
+  right: -157px;
+}
+form#changeColor .colorIcon{
+  position: absolute;
+  left: -65px;
+  font-size: 40px;
+  top: 34px;
+  color: var(--two);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.colorSpans{
+  position: absolute;
+  z-index: -1;
+}
+.colorSpans div{
+  width: 6px;
+  height: 9px;
+  position: absolute;
+}
+.colorSpans div:first-of-type{
+  background-color: rebeccapurple;
+  top: 20px;
+  left: 5px;
+  animation: changeColor 1s infinite forwards ease-in-out;
+}
+.colorSpans div:nth-of-type(2){
+  background-color: red;
+  top: 8px;
+  left: 7px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.2s;
+}
+.colorSpans div:nth-of-type(3){
+  background-color: red;
+  top: 5px;
+  left: 17px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.4s;
+}
+.colorSpans div:last-of-type{
+  background-color: red;
+  top: 7px;
+  left: 27px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.6s;
+}
+form#changeColor input{
+  cursor: pointer;
+}
+    /* Small */
+    @media (max-width: 768px) {
+      
+    }
+@keyframes changeColor {
+  0%{
+    background-color: var(--main);
+  }
+  100%{
+    background-color: var(--background);
   }
 }
 /* style option */

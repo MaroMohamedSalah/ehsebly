@@ -91,6 +91,80 @@ ul{
   color: var(--background);
   z-index: -1;
 }
+/* color change */
+form#changeColor{
+  position: absolute;
+  background-color: var(--two);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 22px;
+  gap: 10px;
+  top: 281px;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 0.5s ease-in-out;
+  z-index: 500;
+  right: -157px;
+  direction: rtl;
+}
+form#changeColor input{
+  cursor: pointer;
+}
+form#changeColor .colorIcon{
+  position: absolute;
+  left: -65px;
+  font-size: 40px;
+  top: 34px;
+  color: var(--two);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.colorSpans{
+  position: absolute;
+  z-index: -1;
+}
+.colorSpans div{
+  width: 6px;
+  height: 9px;
+  position: absolute;
+}
+.colorSpans div:first-of-type{
+  background-color: rebeccapurple;
+  top: 20px;
+  left: -35px;
+  animation: changeColor 1s infinite forwards ease-in-out;
+}
+.colorSpans div:nth-of-type(2){
+  background-color: red;
+  top: 8px;
+  left: -33px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.2s;
+}
+.colorSpans div:nth-of-type(3){
+  background-color: red;
+  top: 5px;
+  left: -24px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.4s;
+}
+.colorSpans div:last-of-type{
+  background-color: red;
+  top: 7px;
+  left: -13px;
+  animation: changeColor 1s infinite forwards ease-in-out 0.6s;
+}
+    /* Small */
+    @media (max-width: 768px) {
+      
+    }
+@keyframes changeColor {
+  0%{
+    background-color: var(--main);
+  }
+  100%{
+    background-color: var(--background);
+  }
+}
 /* Style setting */
 .setting{
   position: absolute;

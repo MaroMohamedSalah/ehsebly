@@ -57,6 +57,42 @@ back.onclick = function(){
     height: 0;
     `
 }
+// change color 
+let colorCount = 0;
+let changeColor = document.getElementById("changeColor");
+let colorIcon = document.getElementById("colorIcon");
+let fontColor  = document.getElementById('fontColor');
+let backColor  = document.getElementById('backColor');
+let secondColor  = document.getElementById('secondColor');
+let mainColor  = document.getElementById('mainColor');
+
+colorIcon.onclick = () =>{
+    if(colorCount ===0){
+        colorCount++;
+        changeColor.style.right = '0';
+    }else{
+        colorCount=0;
+        changeColor.style.right = '-157px';
+    }
+}
+
+fontColor.value = "#011936"
+backColor.value = '#ED254E'
+secondColor.value = '#F9DC5C'
+mainColor.value = '#F4FFFD'
+
+fontColor.onchange = () =>{
+    r.style.setProperty('--font-color', fontColor.value)
+}
+backColor.onchange = () =>{
+    r.style.setProperty('--main', backColor.value)
+}
+secondColor.onchange = () =>{
+    r.style.setProperty('--two', secondColor.value)
+}
+mainColor.onchange = () =>{
+    r.style.setProperty('--background', mainColor.value)
+}
 // setting 
 let count = 0;
 let gear = document.getElementById("gear");

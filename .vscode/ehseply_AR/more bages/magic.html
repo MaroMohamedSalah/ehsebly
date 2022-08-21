@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic | إحسبلي</title>
+    <!-- link to style  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- link to normalize -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- add awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- change tab img -->
+    <link rel="icon" href="../image/369338 (1).svg">
+</head>
+
+<body>
+    <!-- Start nav  -->
+    <section class="nav">
+        <div class="container">
+            <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+            <a href="../index.html">
+                <h1>إحسبلي</h1>
+            </a>
+            <!-- <div class="mood" id="mood">
+                <div id="dark">
+                    <i title="Dark Mood" class="fa-solid fa-moon"></i>
+                </div>
+                <div id="light">
+                    <i title="Light Mood" class="fa-solid fa-sun"></i>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- start change color  -->
+    <form action="" method="post" id="changeColor">
+        <label for="font">لون الخط:</label>
+        <input id="fontColor" type="color" name="font" value="#011936FF">
+        <label for="back">اللون الرئيسي</label>
+        <input id="backColor" type="color" name="back">
+        <label for="second">اللون الفرعي:</label>
+        <input id="secondColor" type="color" name="second">
+        <label for="main">لون الخلفية:</label>
+        <input id="mainColor" type="color" name="main">
+        <div onclick="right: 0;" class="colorIcon" id="colorIcon">
+            <div class="colorSpans">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <i class="fa-solid fa-palette"></i>
+        </div>
+    </form>
+    <!-- end change color  -->
+    <!-- End nav  -->
+    <section class="intro">
+        <div class="container">
+            <ul>
+                <a href="#part1">
+                    <li>
+                        <span><i class="fa-solid fa-angles-left"></i></span>
+                        الرئيسية
+                    </li>
+                </a>
+                <a href="#part2">
+                    <li>
+                        <span><i class="fa-solid fa-angles-left"></i></span>
+                        مساحات و محيطات الاشكال
+                    </li>
+                </a>
+                <a href="#part3">
+                    <li>
+                        <span><i class="fa-solid fa-angles-left"></i></span>
+                        أكثر القوانين شهرة
+                    </li>
+                </a>
+                <a href="#part4">
+                    <li>
+                        <span><i class="fa-solid fa-angles-left"></i></span>
+                        مُحول الوحدات
+                    </li>
+                </a>
+                <a href="#part5">
+                    <li>
+                        <span><i class="fa-solid fa-angles-left"></i></span>
+                        كل حاجة عن عمرك
+                    </li>
+                </a>
+            </ul>
+            <a href="#part1">
+                <div class="icon">
+                    <i class="fa-solid fa-angles-down"></i>
+                </div>
+            </a>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <!-- Start Main  -->
+    <section class="main" id="main">
+        <div class="container">
+            <div class="part1" id="part1">
+                <div class="box" id="evenOrOdd">
+                    زوجي <span>?</span> فردي
+                </div>
+                <div class="box" id="prime">
+                    اوَلي <span>ولا</span> لأ
+                </div>
+                <div class="box" id="which">
+                    اي الارقام يمكنها القسمة عليا<span>؟</span>
+                </div>
+            </div>
+            <div class="s">
+                <h1 class="hr">مساحات و محيطات الاشكال</h1>
+            </div>
+            <div class="part2" id="part2">
+                <div class="box" id="circle">
+                    <div class="first">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                        <div class="title">
+                            <h1>الدائرة</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="cInput" type="number" placeholder="حط نق هنا بالسم">
+                            <label for=""><button class="done" id="done">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area">النتيجة هتكون هنا</span></h1>
+                            <h1>المجيط: <span id="per">النتيجة هتكون هنا</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="rectangle">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/rectangle.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>مستطيل</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="rInput" type="number" placeholder="حط العرض بالسم">
+                            <input id="rInput2" type="number" placeholder="حط الطول بالسم">
+                            <label for=""><button class="done" id="done2">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area2">النتيجة هتكون هنا</span></h1>
+                            <h1>المحيط: <span id="per2">النتيجة هتكون هنا</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="square">
+                    <div class="first">
+                        <div class="icon">
+                            <i class="fa-solid fa-square"></i>
+                        </div>
+                        <div class="title">
+                            <h1>مُربع</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="sInput" type="number" placeholder="اكتب طول ضلع المربع">
+                            <label for=""><button class="done" id="done3">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area3">النتيجة هتكون هنا</span></h1>
+                            <h1>المحيط: <span id="per3">النتيجة هتكون هنا</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="rightTriangle">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/levels.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>مثلث قائم</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="rtInput" type="number" placeholder="طول القاعدة بالسنتي">
+                            <input id="rtInput2" type="number" placeholder="الارتفاع بالسنتي">
+                            <label for=""><button class="done" id="done4">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area4">النتيجة هتكون هنا</span></h1>
+                            <h1>المحيط: <span id="per5">بطل كسل و اجمع الاضلاع اللي معاك يعم</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="trapezoid">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/trapezoid.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>شبه المنحرف</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="tInput" type="number" placeholder="طول القاعدة الصُغرى ">
+                            <input id="tInput2" type="number" placeholder="طول القاعدة الكُبرى">
+                            <input id="tInput3" type="number" placeholder="الإرتفاع بالسنتي">
+                            <label for=""><button class="done" id="done5">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area5">النتيجة هتكون هنا</span></h1>
+                            <h1>المحيط: <span id="per5">مجموع اطوال الأضلاع</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="parallelogram">
+                    <div class="first">
+                        <div class="icon">
+                            <img src="../image/parallelogram.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>متوازي اضلاع</h1>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div>
+                            <input id="pInput" type="number" placeholder="طول القاعدة بالسنتي">
+                            <input id="pInput2" type="number" placeholder="الإرتفاع بالسنتي">
+                            <label for=""><button class="done" id="done6">
+                                    <h4>تمام</h4>
+                                </button></label>
+                        </div>
+                        <div class="result" id="res">
+                            <h1>المساحة: <span id="area6">النتيجة هتكون هنا</span></h1>
+                            <h1>المحيط: <span id="per6">مجموع اطوال الاضلاع</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s">
+                <h1 class="hr">أكثر القوانين شهرة</h1>
+            </div>
+            <div class="part3" id="part3">
+                <div class="laws">
+                    <!-- <div class="box" id="euclid">
+                        <h3>Euclid's Theory</h3>
+                    </div> -->
+                    <div class="box active" id="pythagoras">
+                        <h3>فيثاغورث</h3>
+                        <h4>إختار الضلع الناقص:</h4>
+                        <img src="../image/Rtriangle.svg.png" alt="">
+                        <div>
+                            <input id="A" type="text" placeholder="a"><label for="A"><input id="a" name="ch"
+                                    type="radio"></label>
+                        </div>
+                        <div>
+                            <input id="B" type="text" placeholder="b"><label for="B"><input id="b" name="ch"
+                                    type="radio"></label>
+                        </div>
+                        <div>
+                            <input id="C" type="text" placeholder="c"><label for="C"><input id="c" name="ch"
+                                    type="radio"></label>
+                        </div>
+                        <button id="re">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </button>
+                        <button id="calc">
+                            إحسبلي
+                        </button>
+                    </div>
+                    <!-- <div class="box" id="">
+                        <h3>test</h3>
+                    </div> -->
+                </div>
+            </div>
+            <div class="s">
+                <h1 class="hr">مُحول الوحدات</h1>
+            </div>
+            <div class="part4" id="part4">
+                <div class="p1">
+                    <h1>From:
+                        <button class="calc2" id="calc2">إحسب</button>
+                        <div class="def" id="def1">
+                            <div class="beforeD1" id="beforeD1"></div>
+                            <h3 title="kilometer" id="km">KM</h3>
+                            <h3 title="Giga" id="G">G</h3>
+                            <h3 title="celsius" id="ci">c</h3>
+                            <div class="fromSelect">
+                                <i id="selectArrow" class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </h1>
+                    <div class="result">
+                        <h2>
+                            <input id="part4In" type="number">
+                            <span id="unit">KM</span>
+                        </h2>
+                    </div>
+                    <div class="exit" id="exit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="ch1" id="ch1">
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                    </div>
+                </div>
+                <div class="p2">
+                    <h1>To:
+                        <div class="def" id="def2">
+                            <div class="beforeD2" id="beforeD2"></div>
+                            <h3 id="f">M</h3>
+                            <h3 id="s">feet</h3>
+                            <h3 id="th">cm</h3>
+                            <div class="fromSelect">
+                                <i id="selectArrow2" class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </h1>
+                    <div class="result">
+                        <h2>
+                            <span id="part4Res">النتيجة هتكون هنا</span>
+                            <span id="unit2">M</span>
+                        </h2>
+                    </div>
+                    <div class="ch2" id="ch2">
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                        <h4>test</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="s">
+                <h1 class="hr">كل حاجة عن عمرك</h1>
+            </div>
+            <div class="part5" id="part5">
+                <div id="group">
+                    <button id="return">جديد</button>
+                    <div class="background">
+                        <input id="birthday" type="date" placeholder="Your Birthday">
+                    </div>
+                    <button id="birthDone">تمام</button>
+                    <i id="checkDone" class="fa-solid fa-check-double"></i>
+                </div>
+                <div class="birthResult" id="birthR">
+                    <div id="first">
+                        <p id="firstP"></p>
+                    </div>
+                    <div id="mid">
+                        <p id="midP"></p>
+                        <p id="more"></p>
+                    </div>
+                    <div id="last">
+                        <p id="lastP"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Main  -->
+    <!-- Start footer  -->
+    <footer>
+        <img id="myPic" src="../image/DSC_0071 copy.jpg" alt="">
+        <div class="social" id="social">
+            <a href="https://www.linkedin.com/in/marwan-mohamed-636b25226/">
+                <div class="linkedIn" id="linkedIn"><i class="fa-brands fa-linkedin-in"></i></div>
+            </a>
+            <a href="https://github.com/MaroMohamedSalah">
+                <div class="git" id="git"><i class="fa-brands fa-github"></i></div>
+            </a>
+            <a href="https://www.instagram.com/maro_salah1/">
+                <div class="insta" id="insta"><i class="fa-brands fa-instagram"></i></div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100009187233222">
+                <div class="face" id="face"><i class="fa-brands fa-facebook-f"></i></div>
+            </a>
+        </div>
+    </footer>
+    <!-- End footer  -->
+    <script src="../script2.js"></script>
+</body>
+
+</html>

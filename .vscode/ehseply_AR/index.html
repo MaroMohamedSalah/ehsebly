@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>إحسبلي</title>
+    <!-- link to style  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link to normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- add awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- change tab img -->
+    <link rel="icon" href="image/369338 (1).svg">
+</head>
+
+<body>
+    <!-- Start nav -->
+    <section class="nav">
+        <div class="container">
+            <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+            <h1>إحسبلي</h1>
+        </div>
+    </section>
+    <!-- End nav -->
+    <!-- Start sitting -->
+    <div class="setting" id="setting">
+        <div class="setIcon" id="setIcon">
+            <i id="gear" class="fa-solid fa-gear"></i>
+        </div>
+        <div class="mood" id="mood">
+            <div id="dark">
+                <i title="Dark Mood" class="fa-solid fa-moon"></i>
+            </div>
+            <div id="light">
+                <i title="Light Mood" class="fa-solid fa-sun"></i>
+            </div>
+        </div>
+        <div class="lang">
+            <a href="../index.html">
+                <h1><span><i class="fa-solid fa-language"></i></span></h1>
+            </a>
+            <h3>English</h3>
+        </div>
+    </div>
+    <!-- End sitting -->
+    <!-- start change color  -->
+    <form action="" method="post" id="changeColor">
+        <label for="font">لون الخط:</label>
+        <input id="fontColor" type="color" name="font" value="#011936FF">
+        <label for="back">اللون الرئيسي</label>
+        <input id="backColor" type="color" name="back">
+        <label for="second">اللون الفرعي:</label>
+        <input id="secondColor" type="color" name="second">
+        <label for="main">لون الخلفية:</label>
+        <input id="mainColor" type="color" name="main">
+        <div onclick="right: 0;" class="colorIcon" id="colorIcon">
+            <div class="colorSpans">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <i class="fa-solid fa-palette"></i>
+        </div>
+    </form>
+    <!-- end change color  -->
+    <!-- Start option -->
+    <section class="option" id="option">
+        <div class="container">
+            <div class="standard" id="standard">
+                <div class="icon"><i class="fa-solid fa-divide"></i></div>
+                <h1> الحاسبة</h1>
+            </div>
+            <div class="magic" id="magic">
+                <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h1>المزيد</h1>
+            </div>
+        </div>
+    </section>
+    <!-- End option -->
+    <!-- Start Standard Calculator  -->
+    <section class="calc" id="calc">
+        <div class="container">
+            <div class="calculator" id="calculator">
+                <input readonly="readonly" placeholder="0" class="screen" id="screen" type="text">
+                <button class="mod" id="mod">
+                    <i class="fa-solid fa-percent"></i>
+                </button>
+                <button class="clear" id="clear">
+                    <i class="fa-solid fa-c"></i>
+                </button>
+                <button class="del" id="del">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+                <button class="pow" id="pow">
+                    x<sup>2</sup>
+                </button>
+                <button class="squ" id="squ">
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </button>
+                <button class="div" id="div">
+                    <i class="fa-solid fa-divide"></i>
+                </button>
+                <button class="seven" id="seven">
+                    <i class="fa-solid fa-7"></i>
+                </button>
+                <button class="eight" id="eight">
+                    <i class="fa-solid fa-8"></i>
+                </button>
+                <button class="nine" id="nine">
+                    <i class="fa-solid fa-9"></i>
+                </button>
+                <button class="power" id="power">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="four" id="four">
+                    <i class="fa-solid fa-4"></i>
+                </button>
+                <button class="five" id="five">
+                    <i class="fa-solid fa-5"></i>
+                </button>
+                <button class="six" id="six">
+                    <i class="fa-solid fa-6"></i>
+                </button>
+                <button class="sub" id="sub">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <button class="one" id="one">
+                    <i class="fa-solid fa-1"></i>
+                </button>
+                <button class="two" id="two">
+                    <i class="fa-solid fa-2"></i>
+                </button>
+                <button class="three" id="three">
+                    <i class="fa-solid fa-3"></i>
+                </button>
+                <button class="add" id="add">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="logo" id="logo">
+                    <img src="image/Blue and White Simple Professional Web Developer Personal Career Logo.png" alt="">
+                </div>
+                <button class="zero" id="zero">
+                    <i class="fa-solid fa-0"></i>
+                </button>
+                <button class="dot" id="dot">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button class="eq" id="eq">
+                    <i class="fa-solid fa-equals"></i>
+                </button>
+                <div class="back" id="back">
+                    <i class="fa-solid fa-circle-arrow-left"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Standard Calculator  -->
+    <!-- Start footer  -->
+    <footer>
+        <img id="myPic" src="image/DSC_0071 copy.jpg" alt="">
+        <div class="social" id="social">
+            <a href="https://www.linkedin.com/in/marwan-mohamed-636b25226/">
+                <div class="linkedIn" id="linkedIn"><i class="fa-brands fa-linkedin-in"></i></div>
+            </a>
+            <a href="https://github.com/MaroMohamedSalah">
+                <div class="git" id="git"><i class="fa-brands fa-github"></i></div>
+            </a>
+            <a href="https://www.instagram.com/maro_salah1/">
+                <div class="insta" id="insta"><i class="fa-brands fa-instagram"></i></div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100009187233222">
+                <div class="face" id="face"><i class="fa-brands fa-facebook-f"></i></div>
+            </a>
+        </div>
+    </footer>
+    <!-- End footer  -->
+    <script src="script.js"></script>
+</body>
+
+</html>
