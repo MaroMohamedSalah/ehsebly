@@ -79,6 +79,7 @@ settingIcon.onclick = () =>{
     }
 }
 // change color 
+
 let colorCount = 0;
 let changeColor = document.getElementById("changeColor");
 let colorIcon = document.getElementById("colorIcon");
@@ -96,23 +97,34 @@ colorIcon.onclick = () =>{
         changeColor.style.right = '-157px';
     }
 }
+// localStorage 
 
-fontColor.value = "#011936"
-backColor.value = '#ED254E'
-secondColor.value = '#F9DC5C'
-mainColor.value = '#F4FFFD'
+fontColor.value = localStorage.getItem('fontColor');
+backColor.value = localStorage.getItem('backColor');
+secondColor.value = localStorage.getItem('secondColor');
+mainColor.value = localStorage.getItem('mainColor');
+
+
+r.style.setProperty('--font-color', localStorage.getItem('fontColor'))
+r.style.setProperty('--main', localStorage.getItem("backColor"))
+r.style.setProperty('--two', localStorage.getItem("secondColor"))
+r.style.setProperty('--background', localStorage.getItem("mainColor"))
 
 fontColor.onchange = () =>{
-    r.style.setProperty('--font-color', fontColor.value)
+    localStorage.setItem('fontColor', fontColor.value);
+    r.style.setProperty('--font-color', localStorage.getItem("fontColor"))
 }
 backColor.onchange = () =>{
-    r.style.setProperty('--main', backColor.value)
+    localStorage.setItem('backColor', backColor.value);
+    r.style.setProperty('--main', localStorage.getItem("backColor"))
 }
 secondColor.onchange = () =>{
-    r.style.setProperty('--two', secondColor.value)
+    localStorage.setItem('secondColor', secondColor.value);
+    r.style.setProperty('--two', localStorage.getItem("secondColor"))
 }
 mainColor.onchange = () =>{
-    r.style.setProperty('--background', mainColor.value)
+    localStorage.setItem('mainColor', mainColor.value);
+    r.style.setProperty('--background', localStorage.getItem("mainColor"))
 }
 // standard calculator code :
 // numbers 
