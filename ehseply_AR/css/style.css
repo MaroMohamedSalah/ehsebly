@@ -1081,6 +1081,7 @@ form#changeColor .colorIcon{
   transform: translateY(-50%);
   text-align: center;
   width: 100%;
+  color: var(--font-color);
 }
 .part3 .laws .box:hover h3{
   position: absolute;
