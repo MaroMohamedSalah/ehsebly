@@ -67,9 +67,9 @@ ul{
   background: var(--two);
   border-radius: 8px;
 }
-::-webkit-scrollbar-thumb:hover{
+/* ::-webkit-scrollbar-thumb:hover{
   background: var(--main);
-}
+} */
 /* style dark mood */
 #mood{
   position: absolute;
