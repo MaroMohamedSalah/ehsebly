@@ -434,7 +434,7 @@ birthDone.onclick = function() {
         const BirthDay2 = new Date(birthInput.value);
         const yearsOld = Math.round((Date.now() - BirthDay)/1000/60/60/24/365)
         console.log(BirthDay)
-        const next = new Date(BirthDay.setFullYear(BirthDay.getFullYear()+ yearsOld + 1))
+        const next = new Date(BirthDay.setFullYear(BirthDay.getFullYear()+ yearsOld ))
         group.style.cssText = `
         position: absolute;
         top: 100px;
@@ -450,14 +450,15 @@ birthDone.onclick = function() {
         }, 3000);
         first.style.opacity = "1"
         mid.style.opacity = "1"
+        // next birthday
+        firstp.innerHTML = `
+        عيد ميلادك اللي جاي بعد: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> شهر
+        `
         midp.innerHTML = `
-        انت عندك <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> سنة, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> يوم <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
+        انت عندك <span>${Math.floor((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> سنة, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> يوم <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
         `
         more.innerHTML = `
         <span>${Math.round((Date.now() - BirthDay2)/1000/60/60)}</span> ساعة, <span>${Math.round((Date.now() - BirthDay2)/1000/60)}</span> دقيقة و <span>${Math.round((Date.now() - BirthDay2)/1000)}</span> ثانية
-        `
-        firstp.innerHTML = `
-        عيد ميلادك اللي جاي بعد: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> شهر
         `
         lastp.innerHTML = `
         اتولدت في سنة: <span>${Math.floor(((BirthDay2.getFullYear())-622)/(354/365.25))}</span> هجرياً 

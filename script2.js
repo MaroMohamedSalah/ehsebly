@@ -374,8 +374,6 @@ let midp = document.getElementById("midP");
 let more = document.getElementById("more");
 let lastp = document.getElementById("lastP");
 let return1 = document.getElementById("return");
-console.log(birthDone)
-console.log(birthInput)
 let dateNow = Date.now();
 let d = new Date();
 birthDone.onclick = function() {
@@ -387,7 +385,8 @@ birthDone.onclick = function() {
         const BirthDay2 = new Date(birthInput.value);
         const yearsOld = Math.round((Date.now() - BirthDay)/1000/60/60/24/365)
         console.log(BirthDay)
-        const next = new Date(BirthDay.setFullYear(BirthDay.getFullYear()+ yearsOld + 1))
+        const next = new Date(BirthDay.setFullYear(BirthDay.getFullYear()+ yearsOld ));
+        console.log(next);
         group.style.cssText = `
         position: absolute;
         top: 100px;
@@ -403,15 +402,21 @@ birthDone.onclick = function() {
         }, 3000);
         first.style.opacity = "1"
         mid.style.opacity = "1"
+        
+        // next birthday count
+        firstp.innerHTML = `
+        Your next birthday after: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> Months
+        `
+
+        // years old
         midp.innerHTML = `
-        You Have <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> Years, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> Days <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
+        You Have <span>${Math.floor((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> Years, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> Days <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
         `
         more.innerHTML = `
         <span>${Math.round((Date.now() - BirthDay2)/1000/60/60)}</span> Hours, <span>${Math.round((Date.now() - BirthDay2)/1000/60)}</span> Minutes and <span>${Math.round((Date.now() - BirthDay2)/1000)}</span> Second
         `
-        firstp.innerHTML = `
-        Your next birthday after: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> Months
-        `
+
+
         lastp.innerHTML = `
         Your Hijri Year is <span>${Math.floor(((BirthDay2.getFullYear())-622)/(354/365.25))}</span>h 
         `
