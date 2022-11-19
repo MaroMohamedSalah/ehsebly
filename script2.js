@@ -404,8 +404,11 @@ birthDone.onclick = function() {
         mid.style.opacity = "1"
         
         // next birthday count
+        let nextBirthDayCount = Math.round((next - Date.now())/1000/60/60/24/30);
+        if(nextBirthDayCount < 0)
+            nextBirthDayCount = nextBirthDayCount + 12 ;
         firstp.innerHTML = `
-        Your next birthday after: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> Months
+        Your next birthday after: <span>${nextBirthDayCount}</span> Months
         `
 
         // years old
@@ -456,6 +459,16 @@ birthDone.onclick = function() {
         }
     }
 }
+// use enter key
+birthInput.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+    // Cancel the default action, if needed
+        event.preventDefault();
+    // Trigger the button element with a click
+        birthDone.click();
+    }
+});
 // footer
 let myPic = document.getElementById("myPic");
 let face = document.getElementById("face");

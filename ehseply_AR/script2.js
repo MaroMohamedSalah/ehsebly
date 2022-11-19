@@ -451,8 +451,11 @@ birthDone.onclick = function() {
         first.style.opacity = "1"
         mid.style.opacity = "1"
         // next birthday
+        let nextBirthDayCount = Math.round((next - Date.now())/1000/60/60/24/30);
+        if(nextBirthDayCount < 0)
+            nextBirthDayCount = nextBirthDayCount + 12 ;
         firstp.innerHTML = `
-        عيد ميلادك اللي جاي بعد: <span>${Math.round((next - Date.now())/1000/60/60/24/30)}</span> شهر
+        عيد ميلادك اللي جاي بعد: <span>${Math.round(nextBirthDayCount)}</span> شهر
         `
         midp.innerHTML = `
         انت عندك <span>${Math.floor((Date.now() - BirthDay2)/1000/60/60/24/365)}</span> سنة, <span>${Math.round((Date.now() - BirthDay2)/1000/60/60/24)}</span> يوم <span><i id="selectArrow3" class="fa-solid fa-angle-down"></i></span>
@@ -499,6 +502,16 @@ birthDone.onclick = function() {
         }
     }
 }
+// use enter key
+birthInput.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+    // Cancel the default action, if needed
+        event.preventDefault();
+    // Trigger the button element with a click
+        birthDone.click();
+    }
+});
 // footer
 let myPic = document.getElementById("myPic");
 let face = document.getElementById("face");
